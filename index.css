@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --soft-blue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+  --main-bg: hsl(217, 54%, 11%);
+  --card-bg: hsl(216, 50%, 16%);
+  --line: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+}
+
+p {
+  font-size: 16px;
+  font-weight: 300;
+}
+
+body {
+  background-color: var(--main-bg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh;
+  padding: 2.5em 0;
+}
+body .card {
+  margin-top: 2em;
+  background-color: var(--card-bg);
+  width: 90%;
+  max-width: 350px;
+  text-align: left;
+  padding: 1.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+  border-radius: 15px;
+}
+body .card section {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  color: var(--soft-blue);
+  font-family: "Outfit", sans-serif;
+}
+body .card section header {
+  position: relative;
+}
+body .card section header .equilibrium {
+  display: block;
+  width: 100%;
+  border-radius: 10px;
+}
+body .card section header .header--hover {
+  border-radius: 10px;
+  background-color: var(--cyan);
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.4s all linear;
+}
+body .card section header .header--hover:hover {
+  opacity: 0.65;
+}
+body .card section h2 {
+  color: var(--white);
+  font-size: 1.5em;
+  font-weight: 400;
+  margin-top: 0.35em;
+}
+body .card section h2:hover {
+  color: var(--cyan);
+}
+body .card section p {
+  max-width: 25ch;
+  line-height: 1.6;
+}
+body .card section div {
+  display: flex;
+  justify-content: space-between;
+}
+body .card section div .eth {
+  display: flex;
+  gap: 0.5em;
+  color: var(--cyan);
+}
+body .card section div .time {
+  display: flex;
+  gap: 0.5em;
+}
+body .card section hr {
+  border: none;
+  border: 1px solid;
+  border-color: var(--line);
+  margin: 0.25em 0;
+}
+body .card section footer {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+body .card section footer .avatar {
+  width: 12.5%;
+  border: var(--white) 1.5px solid;
+  border-radius: 50%;
+}
+body .card section footer p span {
+  color: var(--white);
+}
+body .card section footer p span:hover {
+  color: var(--cyan);
+}
+body .attribution {
+  color: var(--white);
+  font-size: 11px;
+  text-align: center;
+}
+body .attribution a {
+  color: hsl(228deg, 45%, 44%);
+}
